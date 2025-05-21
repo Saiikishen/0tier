@@ -3,7 +3,6 @@
 import socket
 import sys
 
-# parse parameters
 if len(sys.argv) != 2:
     print("Usage: python3 vswitch.py {VSWITCH_PORT}")
     sys.exit(1)
