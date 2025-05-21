@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import socket
 import sys
@@ -17,11 +16,10 @@ vserver_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 vserver_sock.bind(server_addr)
 print(f"[VSwitch] Started at {server_addr[0]}:{server_addr[1]}")
 
-# MAC address table: maps MAC -> (ip, port)
+#  MAC -> (ip, port)
 mac_table = {}
 
 while True:
-    # read ethernet frame from VPort
     data, vport_addr = vserver_sock.recvfrom(1518)
 
     # parse ethernet header
