@@ -56,5 +56,4 @@ while True:
             vserver_sock.sendto(data, addr)
 
     else:
-        # unknown unicast or other
         print(f"    Discarded")
