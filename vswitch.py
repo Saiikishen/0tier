@@ -48,7 +48,7 @@ while True:
             vserver_sock.sendto(data, addr)
 
     elif eth_dst.startswith("01:00:5e") or eth_dst.startswith("33:33"):
-        # multicast (IPv4 and IPv6)
+        # multicast 
         mcast_macs = [mac for mac in mac_table if mac != eth_src]
         mcast_addrs = {mac_table[mac] for mac in mcast_macs}
         print(f"    Multicast forwarded to: {mcast_addrs}")
