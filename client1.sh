@@ -6,9 +6,8 @@ IP_ADDR="10.0.0.1/24"
 SERVER_IP="127.0.0.1"
 SERVER_PORT="9993"
 
-# Run vport in background
 sudo ./vport $SERVER_IP $SERVER_PORT $TAP_IF &
-sleep 1  # wait for TAP creation
+sleep 1  # wait 
 
 # Configure TAP
 sudo ip addr add $IP_ADDR dev $TAP_IF
